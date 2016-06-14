@@ -2,8 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Counter extends Component {
   static propTypes = {
-    counter: PropTypes.number.isRequired,
-    actions: PropTypes.object.isRequired
+    counter: PropTypes.number.isRequired
   };
 
   render() {
