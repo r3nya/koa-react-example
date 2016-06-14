@@ -3,7 +3,6 @@ import staticFolder from 'koa-static-folder';
 import React from 'react';
 import pkg from '../../package'
 import { renderToString } from 'react-dom/server';
-import qs from 'qs';
 import { Provider } from 'react-redux';
 import configureStore from '../configureStore';
 import App from '../containers/App';
