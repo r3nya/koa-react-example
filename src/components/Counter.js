@@ -10,9 +10,8 @@ export default class Counter extends Component {
 
     return (
       <div className="counter">
-        <h2>counter</h2>
+        <h2>counter: {counter}</h2>
         <p>
-          {counter}
           <button onClick={actions.increment}>+</button>
           <button onClick={actions.decrement}>-</button>
         </p>
