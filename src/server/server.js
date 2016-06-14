@@ -21,13 +21,13 @@ const renderFullPage = (html, initialState) => {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Example app</title>
+      </head>
+      <body>
+        <div id="root">${html}</div>
         <script>
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
         </script>
         <script src="/dist/bundle.js"></script>
-      </head>
-      <body onLoad="window.initApp()">
-        <div id="root">${html}</div>
       </body>
     </html>
   `;

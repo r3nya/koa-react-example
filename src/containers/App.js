@@ -7,10 +7,10 @@ const mapStateToProps = (state) => (
   { counter: state.counter }
 );
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = {
   increment,
   decrement
-});
+};
 
 @connect(mapStateToProps, mapDispatchToProps)
 export default class App extends Component {
