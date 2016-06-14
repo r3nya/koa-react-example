@@ -13,8 +13,8 @@ module.exports = {
       { test: /\.styl$/, loader: "style!css!postcss" },
       { test: /\.(jpg|png)$/, loader: "url?limit=5000&name=[name]-[hash].[ext]"},
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel'
       }
     ]
