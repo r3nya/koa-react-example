@@ -35,9 +35,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {
-      counter
-    } = this.props;
+    const { counter } = this.props;
 
     return (
       <div id="app">

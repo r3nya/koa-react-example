@@ -7,10 +7,7 @@ export default class Counter extends Component {
   };
 
   render() {
-    const {
-      counter,
-      ...actions
-    } = this.props;
+    const { counter, ...actions } = this.props;
 
     return (
       <div className="counter">
