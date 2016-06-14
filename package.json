@@ -38,7 +38,6 @@
     "babel-polyfill": "^6.9.1",
     "koa": "^1.2.0",
     "koa-static-folder": "^0.1.6",
-    "qs": "^6.2.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
