@@ -1,4 +1,4 @@
-export {
+import {
   SET_COUNTER,
   INCREMENT_COUNTER,
   DECREMENT_COUNTER

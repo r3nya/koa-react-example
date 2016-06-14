@@ -3,15 +3,13 @@ import React, { Component, PropTypes } from 'react';
 export default class Counter extends Component {
   static propTypes = {
     counter: PropTypes.number.isRequired,
-    increment: PropTypes.func.isRequired,
-    decrement: PropTypes.func.isRequired,
+    actions: PropTypes.object.isRequired
   };
 
   render() {
     const {
       counter,
-      increment,
-      decrement
+      ...actions
     } = this.props;
 
     return (
@@ -19,8 +17,8 @@ export default class Counter extends Component {
         <h2>counter</h2>
         <p>
           {counter}
-          <button onClick={increment}>+</button>
-          <button onClick={decrement}>-</button>
+          <button onClick={actions.increment}>+</button>
+          <button onClick={actions.decrement}>-</button>
         </p>
       </div>
     );
