@@ -9,9 +9,9 @@ module.exports = {
     './src/client.js'
   ],
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../public'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/public/'
   },
   module: {
     loaders: [

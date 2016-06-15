@@ -31,7 +31,7 @@ const renderFullPage = (html, initialState) => {
       </head>
       <body>
         <div id="root">${html}</div>
-        <script src="/dist/bundle.js"></script>
+        <script src="/public/bundle.js"></script>
       </body>
     </html>
   `;
