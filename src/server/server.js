@@ -1,9 +1,17 @@
 import koa from 'koa';
 import staticFolder from 'koa-static-folder';
 import React from 'react';
-import pkg from '../../package'
+import pkg from 'root/package.json';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
+
+import webpack from 'webpack';
+import webpackDevMiddleware from 'koa-webpack-dev-middleware';
+import webpackHotMiddlevare from 'webpack-hot-middleware';
+import webpackDevConfig from 'webpackPath/config.dev';
+const compiler = webpack(webpackDevConfig);
+const hotMiddleware = webpackHotMiddlevare(compiler);
+
 import configureStore from '../configureStore';
 import App from '../containers/App';
 
@@ -29,6 +37,8 @@ const renderFullPage = (html, initialState) => {
   `;
 }
 
+
+
 function* handleRender(req, res) {
   const initialState = { counter: 0 };
   const store = configureStore(initialState);
@@ -38,6 +48,14 @@ function* handleRender(req, res) {
   this.body = renderFullPage(html, finalState);
 }
 
+app.use(webpackDevMiddleware(compiler, {
+    publicPath: webpackDevConfig.output.publicPath,
+    noInfo: true
+}));
+app.use(function* (next) {
+  yield hotMiddleware.bind(null, this.req, this.res);
+  yield next;
+});
 app.use(handleRender);
 
 app.listen(port, host, err => {

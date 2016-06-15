@@ -1,7 +1,7 @@
 import {
   INCREMENT_COUNTER,
   DECREMENT_COUNTER
-} from '../constants';
+} from 'constants';
 
 export const increment = () => (
   { type: INCREMENT_COUNTER }

@@ -1,0 +1,39 @@
+:root {
+    --green: #2ecc71;
+    --red: #e74c3c;
+}
+
+:local {
+    .btn {
+        width: 4rem;
+        cursor: pointer;
+        margin: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 22px;
+        transition: .3s;
+        display: inline-block;
+        background-color: #fff;
+    }
+
+    .green {
+        color: var(--green);
+        border: 2px var(--green) solid;
+
+        &:hover {
+            color: #fff;
+            background-color: var(--green);
+        }
+    }
+
+    .red {
+        color: var(--red);
+        border: 2px var(--red) solid;
+
+        &:hover {
+            color: #fff;
+            background-color: var(--red);
+        }
+    }
+}

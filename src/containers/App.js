@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
-import { Counter } from '../components';
+import { increment, decrement } from 'actions';
+import { Counter } from 'components';
+import styles from './App.css';
 
 const mapStateToProps = (state) => (
   { counter: state.counter }
@@ -39,7 +40,9 @@ export default class App extends Component {
 
     return (
       <div id="app">
-        <h1>Hello world! <small>It's my Koa-React-Example app.</small></h1>
+        <h1>
+          Hello world! <br /><small>It's my Koa-React-Example app.</small>
+        </h1>
         <Counter
           counter={counter}
           increment={this.handleIncrement}

@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import cx from 'classnames';
+import styles from './Counter.css';
 
 export default class Counter extends Component {
   static propTypes = {
@@ -12,8 +14,14 @@ export default class Counter extends Component {
       <div className="counter">
         <h2>counter: {counter}</h2>
         <p>
-          <button onClick={actions.increment}>+</button>
-          <button onClick={actions.decrement}>-</button>
+          <button
+            className={cx(styles.btn, styles.green)}
+            onClick={actions.increment}
+          >+</button>
+          <button
+            className={cx(styles.btn, styles.red)}
+            onClick={actions.decrement}
+          >-</button>
         </p>
       </div>
     );

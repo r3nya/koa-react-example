@@ -2,7 +2,7 @@ import {
   SET_COUNTER,
   INCREMENT_COUNTER,
   DECREMENT_COUNTER
-} from '../constants';
+} from 'constants';
 
 export default function counter(state = 0, action) {
   switch (action.type) {
